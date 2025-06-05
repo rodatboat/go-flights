@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package internal;
+
+option go_package = ".";
+
+message Airport {
+    string name = 2;
+}
+
+message Flight {
+    string date = 2;
+    optional int32 maxStops = 5;
+    repeated string airlines = 6;
+
+    Airport fromAirport = 13;
+    Airport toAirport = 14;
+}
+
+enum Passenger {
+    UNKNOWN_PASSENGER = 0;
+    ADULT = 1;
+    CHILD = 2;
+    INFANT_ON_LAP = 3;
+    INFANT_IN_SEAT = 4;
+}
+
+enum Class {
+    UNKNOWN_CLASS = 0;
+    ECONOMY = 1;
+    PREMIUM_ECONOMY = 2;
+    BUSINESS = 3;
+    FIRST = 4;
+}
+
+enum Trip {
+    UNKNOWN_TRIP = 0;
+    ROUND_TRIP = 1;
+    ONE_WAY = 2;
+}
+
+message FlightPayload {
+  repeated Flight data = 3;
+  repeated Passenger passengers = 8;
+  Class class = 9;
+  Trip trip = 19;
+}
