@@ -4,7 +4,7 @@
 // 	protoc        v6.31.1
 // source: _schema.proto
 
-package __
+package internal
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -405,7 +405,7 @@ const file___schema_proto_rawDesc = "" +
 	"\fUNKNOWN_TRIP\x10\x00\x12\x0e\n" +
 	"\n" +
 	"ROUND_TRIP\x10\x01\x12\v\n" +
-	"\aONE_WAY\x10\x02B\x03Z\x01.b\x06proto3"
+	"\aONE_WAY\x10\x02B.Z,github.com/rodatboat/google-flights/internalb\x06proto3"
 
 var (
 	file___schema_proto_rawDescOnce sync.Once
