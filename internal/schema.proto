@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package internal;
 
-option go_package = "github.com/rodatboat/google-flights/internal";
+option go_package = "/internal";
 
 message Airport {
     string name = 2;

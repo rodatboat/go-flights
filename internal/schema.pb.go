@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v6.31.1
-// source: _schema.proto
+// source: internal/schema.proto
 
 package internal
 
@@ -60,11 +60,11 @@ func (x Passenger) String() string {
 }
 
 func (Passenger) Descriptor() protoreflect.EnumDescriptor {
-	return file___schema_proto_enumTypes[0].Descriptor()
+	return file_internal_schema_proto_enumTypes[0].Descriptor()
 }
 
 func (Passenger) Type() protoreflect.EnumType {
-	return &file___schema_proto_enumTypes[0]
+	return &file_internal_schema_proto_enumTypes[0]
 }
 
 func (x Passenger) Number() protoreflect.EnumNumber {
@@ -73,7 +73,7 @@ func (x Passenger) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use Passenger.Descriptor instead.
 func (Passenger) EnumDescriptor() ([]byte, []int) {
-	return file___schema_proto_rawDescGZIP(), []int{0}
+	return file_internal_schema_proto_rawDescGZIP(), []int{0}
 }
 
 type Class int32
@@ -115,11 +115,11 @@ func (x Class) String() string {
 }
 
 func (Class) Descriptor() protoreflect.EnumDescriptor {
-	return file___schema_proto_enumTypes[1].Descriptor()
+	return file_internal_schema_proto_enumTypes[1].Descriptor()
 }
 
 func (Class) Type() protoreflect.EnumType {
-	return &file___schema_proto_enumTypes[1]
+	return &file_internal_schema_proto_enumTypes[1]
 }
 
 func (x Class) Number() protoreflect.EnumNumber {
@@ -128,7 +128,7 @@ func (x Class) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use Class.Descriptor instead.
 func (Class) EnumDescriptor() ([]byte, []int) {
-	return file___schema_proto_rawDescGZIP(), []int{1}
+	return file_internal_schema_proto_rawDescGZIP(), []int{1}
 }
 
 type Trip int32
@@ -164,11 +164,11 @@ func (x Trip) String() string {
 }
 
 func (Trip) Descriptor() protoreflect.EnumDescriptor {
-	return file___schema_proto_enumTypes[2].Descriptor()
+	return file_internal_schema_proto_enumTypes[2].Descriptor()
 }
 
 func (Trip) Type() protoreflect.EnumType {
-	return &file___schema_proto_enumTypes[2]
+	return &file_internal_schema_proto_enumTypes[2]
 }
 
 func (x Trip) Number() protoreflect.EnumNumber {
@@ -177,7 +177,7 @@ func (x Trip) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use Trip.Descriptor instead.
 func (Trip) EnumDescriptor() ([]byte, []int) {
-	return file___schema_proto_rawDescGZIP(), []int{2}
+	return file_internal_schema_proto_rawDescGZIP(), []int{2}
 }
 
 type Airport struct {
@@ -189,7 +189,7 @@ type Airport struct {
 
 func (x *Airport) Reset() {
 	*x = Airport{}
-	mi := &file___schema_proto_msgTypes[0]
+	mi := &file_internal_schema_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -201,7 +201,7 @@ func (x *Airport) String() string {
 func (*Airport) ProtoMessage() {}
 
 func (x *Airport) ProtoReflect() protoreflect.Message {
-	mi := &file___schema_proto_msgTypes[0]
+	mi := &file_internal_schema_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -214,7 +214,7 @@ func (x *Airport) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Airport.ProtoReflect.Descriptor instead.
 func (*Airport) Descriptor() ([]byte, []int) {
-	return file___schema_proto_rawDescGZIP(), []int{0}
+	return file_internal_schema_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *Airport) GetName() string {
@@ -237,7 +237,7 @@ type Flight struct {
 
 func (x *Flight) Reset() {
 	*x = Flight{}
-	mi := &file___schema_proto_msgTypes[1]
+	mi := &file_internal_schema_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -249,7 +249,7 @@ func (x *Flight) String() string {
 func (*Flight) ProtoMessage() {}
 
 func (x *Flight) ProtoReflect() protoreflect.Message {
-	mi := &file___schema_proto_msgTypes[1]
+	mi := &file_internal_schema_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -262,7 +262,7 @@ func (x *Flight) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Flight.ProtoReflect.Descriptor instead.
 func (*Flight) Descriptor() ([]byte, []int) {
-	return file___schema_proto_rawDescGZIP(), []int{1}
+	return file_internal_schema_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Flight) GetDate() string {
@@ -312,7 +312,7 @@ type FlightPayload struct {
 
 func (x *FlightPayload) Reset() {
 	*x = FlightPayload{}
-	mi := &file___schema_proto_msgTypes[2]
+	mi := &file_internal_schema_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -324,7 +324,7 @@ func (x *FlightPayload) String() string {
 func (*FlightPayload) ProtoMessage() {}
 
 func (x *FlightPayload) ProtoReflect() protoreflect.Message {
-	mi := &file___schema_proto_msgTypes[2]
+	mi := &file_internal_schema_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -337,7 +337,7 @@ func (x *FlightPayload) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use FlightPayload.ProtoReflect.Descriptor instead.
 func (*FlightPayload) Descriptor() ([]byte, []int) {
-	return file___schema_proto_rawDescGZIP(), []int{2}
+	return file_internal_schema_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *FlightPayload) GetData() []*Flight {
@@ -368,11 +368,11 @@ func (x *FlightPayload) GetTrip() Trip {
 	return Trip_UNKNOWN_TRIP
 }
 
-var File___schema_proto protoreflect.FileDescriptor
+var File_internal_schema_proto protoreflect.FileDescriptor
 
-const file___schema_proto_rawDesc = "" +
+const file_internal_schema_proto_rawDesc = "" +
 	"\n" +
-	"\r_schema.proto\x12\binternal\"\x1d\n" +
+	"\x15internal/schema.proto\x12\binternal\"\x1d\n" +
 	"\aAirport\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\"\xcc\x01\n" +
 	"\x06Flight\x12\x12\n" +
@@ -405,23 +405,23 @@ const file___schema_proto_rawDesc = "" +
 	"\fUNKNOWN_TRIP\x10\x00\x12\x0e\n" +
 	"\n" +
 	"ROUND_TRIP\x10\x01\x12\v\n" +
-	"\aONE_WAY\x10\x02B.Z,github.com/rodatboat/google-flights/internalb\x06proto3"
+	"\aONE_WAY\x10\x02B\vZ\t/internalb\x06proto3"
 
 var (
-	file___schema_proto_rawDescOnce sync.Once
-	file___schema_proto_rawDescData []byte
+	file_internal_schema_proto_rawDescOnce sync.Once
+	file_internal_schema_proto_rawDescData []byte
 )
 
-func file___schema_proto_rawDescGZIP() []byte {
-	file___schema_proto_rawDescOnce.Do(func() {
-		file___schema_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file___schema_proto_rawDesc), len(file___schema_proto_rawDesc)))
+func file_internal_schema_proto_rawDescGZIP() []byte {
+	file_internal_schema_proto_rawDescOnce.Do(func() {
+		file_internal_schema_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_internal_schema_proto_rawDesc), len(file_internal_schema_proto_rawDesc)))
 	})
-	return file___schema_proto_rawDescData
+	return file_internal_schema_proto_rawDescData
 }
 
-var file___schema_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
-var file___schema_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
-var file___schema_proto_goTypes = []any{
+var file_internal_schema_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
+var file_internal_schema_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_internal_schema_proto_goTypes = []any{
 	(Passenger)(0),        // 0: internal.Passenger
 	(Class)(0),            // 1: internal.Class
 	(Trip)(0),             // 2: internal.Trip
@@ -429,7 +429,7 @@ var file___schema_proto_goTypes = []any{
 	(*Flight)(nil),        // 4: internal.Flight
 	(*FlightPayload)(nil), // 5: internal.FlightPayload
 }
-var file___schema_proto_depIdxs = []int32{
+var file_internal_schema_proto_depIdxs = []int32{
 	3, // 0: internal.Flight.fromAirport:type_name -> internal.Airport
 	3, // 1: internal.Flight.toAirport:type_name -> internal.Airport
 	4, // 2: internal.FlightPayload.data:type_name -> internal.Flight
@@ -443,28 +443,28 @@ var file___schema_proto_depIdxs = []int32{
 	0, // [0:6] is the sub-list for field type_name
 }
 
-func init() { file___schema_proto_init() }
-func file___schema_proto_init() {
-	if File___schema_proto != nil {
+func init() { file_internal_schema_proto_init() }
+func file_internal_schema_proto_init() {
+	if File_internal_schema_proto != nil {
 		return
 	}
-	file___schema_proto_msgTypes[1].OneofWrappers = []any{}
+	file_internal_schema_proto_msgTypes[1].OneofWrappers = []any{}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file___schema_proto_rawDesc), len(file___schema_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_internal_schema_proto_rawDesc), len(file_internal_schema_proto_rawDesc)),
 			NumEnums:      3,
 			NumMessages:   3,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file___schema_proto_goTypes,
-		DependencyIndexes: file___schema_proto_depIdxs,
-		EnumInfos:         file___schema_proto_enumTypes,
-		MessageInfos:      file___schema_proto_msgTypes,
+		GoTypes:           file_internal_schema_proto_goTypes,
+		DependencyIndexes: file_internal_schema_proto_depIdxs,
+		EnumInfos:         file_internal_schema_proto_enumTypes,
+		MessageInfos:      file_internal_schema_proto_msgTypes,
 	}.Build()
-	File___schema_proto = out.File
-	file___schema_proto_goTypes = nil
-	file___schema_proto_depIdxs = nil
+	File_internal_schema_proto = out.File
+	file_internal_schema_proto_goTypes = nil
+	file_internal_schema_proto_depIdxs = nil
 }
