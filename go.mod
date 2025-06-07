@@ -1,5 +1,5 @@
 module github.com/rodatboat/google-flights
 
-go 1.23.2
+go 1.23.4
 
-require google.golang.org/protobuf v1.36.6 // indirect
+toolchain go1.24.0
