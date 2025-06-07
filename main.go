@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Println(iata.Unknown)
+	fmt.Println(iata.UNKNOWN)
 
 	fmt.Println("hello world")
 }
