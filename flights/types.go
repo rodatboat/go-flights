@@ -6,7 +6,7 @@ type Airport struct {
 
 type Flight struct {
 	Date     string
-	MaxStops int64
+	MaxStops int32
 	Airlines []string
 
 	FromAirport Airport
