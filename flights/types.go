@@ -1,16 +1,14 @@
 package flights
 
-type Airport struct {
-	name string
-}
+import "github.com/rodatboat/google-flights/common/iata"
 
 type Flight struct {
 	Date     string
 	MaxStops int32
 	Airlines []string
 
-	FromAirport Airport
-	ToAirport   Airport
+	FromAirport iata.IATA
+	ToAirport   iata.IATA
 }
 
 type Passengers struct {

@@ -3,7 +3,7 @@ package flights
 import "github.com/rodatboat/google-flights/internal"
 
 func serializeFlights(flights []Flight) []*internal.Flight {
-	serializedFlights := make([]*internal.Flight, len(flights))
+	serializedFlights := make([]*internal.Flight, 0, len(flights))
 	for idx, _ := range flights {
 		currFlight := flights[idx]
 		serializedFlights = append(serializedFlights,
@@ -13,19 +13,19 @@ func serializeFlights(flights []Flight) []*internal.Flight {
 
 				Airlines: currFlight.Airlines,
 				FromAirport: &internal.Airport{
-					Name: currFlight.FromAirport.name,
+					Name: string(currFlight.FromAirport),
 				},
 				ToAirport: &internal.Airport{
-					Name: currFlight.ToAirport.name,
+					Name: string(currFlight.ToAirport),
 				},
 			})
 	}
 	return serializedFlights
 }
 
-func serializePassgengers(passengers Passengers) []internal.Passenger {
+func serializePassengers(passengers Passengers) []internal.Passenger {
 	totalLength := passengers.Adults + passengers.Children + passengers.InfantInSeat + passengers.InfantOnLap
-	serializedPassengers := make([]internal.Passenger, totalLength)
+	serializedPassengers := make([]internal.Passenger, 0, totalLength)
 
 	for range passengers.Adults {
 		serializedPassengers = append(serializedPassengers, internal.Passenger_ADULT)

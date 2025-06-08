@@ -37,18 +37,18 @@ func DefaultSearchOptions() SearchOptions {
 	}
 }
 
-func Init() {
-	defaultOptions := DefaultSearchOptions()
-
-	search := &FlightSearch{
-		Options: defaultOptions,
-	}
+func GetFlights(search FlightSearch) string {
+	// Add logic if trip is RoundTrip, need to also search for 1) Flip destinations and add return date & 2) Append flights array.
+	// tfs := Build(search.Flights, search.Passengers, search.Options.Class, search.Options.Trip)
+	urlString := SerializeURL(context.Background(), search)
+	return urlString
 }
 
-func GetFlights(search FlightSearch) *TFS {
+func SerializeURL(ctx context.Context, search FlightSearch) string {
+	tfsData := Build(search.Flights, search.Passengers, search.Options.Class, search.Options.Trip)
 
-	return nil
-}
-
-func SerializeURL(ctx context.Context) {
+	return "https://www.google.com/travel/flights/search" +
+		"?tfs=" + tfsData.ToBase64() +
+		"&curr=" + search.Options.Currency.String() +
+		"&hl=" + search.Options.Language.String()
 }

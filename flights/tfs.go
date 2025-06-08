@@ -20,21 +20,20 @@ func Build(
 	class Class,
 	trip Trip,
 ) *TFS {
-	// Add logic if trip is RoundTrip, need to also search for 1) Flip destinations and add return date & 2) Append flights array.
 	return &TFS{
 		Flights:    serializeFlights(flights),
-		Passengers: serializePassgengers(passengers),
+		Passengers: serializePassengers(passengers),
 		Class:      serializeClass(class),
 		Trip:       serializeTrip(trip),
 	}
 }
 
-func (tfs *TFS) ToBase64() (string, error) {
+func (tfs *TFS) ToBase64() string {
 	tfsData, err := tfs.ToSerializedTFS()
 	if err != nil {
-		return "", err
+		panic("Failed to serialize TFS")
 	}
-	return base64.RawURLEncoding.EncodeToString(tfsData), nil
+	return base64.RawURLEncoding.EncodeToString(tfsData)
 }
 
 func (tfs *TFS) ToSerializedTFS() ([]byte, error) {
