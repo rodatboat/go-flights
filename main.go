@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/rodatboat/google-flights/common/iata"
-	"github.com/rodatboat/google-flights/flights"
+	"github.com/rodatboat/go-flights/common/iata"
+	"github.com/rodatboat/go-flights/flights"
 )
 
 func main() {

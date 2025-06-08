@@ -3,7 +3,7 @@ package flights
 import (
 	"encoding/base64"
 
-	"github.com/rodatboat/google-flights/internal"
+	"github.com/rodatboat/go-flights/internal"
 	"google.golang.org/protobuf/proto"
 )
 

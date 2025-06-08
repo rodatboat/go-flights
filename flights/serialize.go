@@ -1,6 +1,6 @@
 package flights
 
-import "github.com/rodatboat/google-flights/internal"
+import "github.com/rodatboat/go-flights/internal"
 
 func serializeFlights(flights []Flight) []*internal.Flight {
 	serializedFlights := make([]*internal.Flight, 0, len(flights))

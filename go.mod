@@ -1,4 +1,4 @@
-module github.com/rodatboat/google-flights
+module github.com/rodatboat/go-flights
 
 go 1.23.4
 

@@ -1,6 +1,6 @@
 package flights
 
-import "github.com/rodatboat/google-flights/common/iata"
+import "github.com/rodatboat/go-flights/common/iata"
 
 type Flight struct {
 	Date     string
