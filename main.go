@@ -13,8 +13,7 @@ func main() {
 		Flights: []flights.Flight{
 			{
 				Date:        "2025-08-01",
-				MaxStops:    0,
-				Airlines:    []string{"AA"},
+				MaxStops:    3,
 				FromAirport: iata.DFW,
 				ToAirport:   iata.MIA,
 			},
@@ -25,6 +24,6 @@ func main() {
 		Options: searchOptions,
 	}
 
-	URL := flights.GetFlights(search)
-	fmt.Println(URL)
+	result := flights.GetFlights(search)
+	fmt.Println(result.URL)
 }

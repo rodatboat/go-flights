@@ -15,3 +15,7 @@ User
 package main
 func main(){}
 ```
+
+TODO:
+1. Add API call to return JSON data
+2. Add price graph functionality
