@@ -1,5 +1,7 @@
 package main
 
+//go:generate go run generate.go
+
 import (
 	"encoding/csv"
 	"fmt"
@@ -33,7 +35,7 @@ func main() {
 	out := make(chan string)
 	var wg sync.WaitGroup
 
-	iataEntries, err := readCSV("./common/iata/generate/airports.csv")
+	iataEntries, err := readCSV("./airports.csv")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
 		panic("")
@@ -63,7 +65,7 @@ func main() {
 	iataFileContent := fmt.Sprintf(
 		`// This package contains IATA airport codes, which Google Flights API supports.
 //
-// Command: go run ./common/iata/generate/generate.go
+// Command: go generate ./common/iata/generate
 //
 // Generation date: %s
 //
@@ -93,7 +95,7 @@ const (
 	}
 
 	iataFileContent += `)`
-	iataFile, err := os.Create("./common/iata/iata.go")
+	iataFile, err := os.Create("../iata.go")
 	if err != nil {
 		log.Fatal(err)
 	}

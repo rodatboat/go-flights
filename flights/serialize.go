@@ -2,12 +2,12 @@ package flights
 
 import "github.com/rodatboat/google-flights/internal"
 
-func serializeFlights(flights []Flight) []internal.Flight {
-	serializedFlights := make([]internal.Flight, len(flights))
+func serializeFlights(flights []Flight) []*internal.Flight {
+	serializedFlights := make([]*internal.Flight, len(flights))
 	for idx, _ := range flights {
 		currFlight := flights[idx]
 		serializedFlights = append(serializedFlights,
-			internal.Flight{
+			&internal.Flight{
 				Date:     currFlight.Date,
 				MaxStops: &currFlight.MaxStops,
 
